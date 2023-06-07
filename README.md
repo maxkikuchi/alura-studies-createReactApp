@@ -1,6 +1,6 @@
 # Curso de React: escrevendo com Typescript
 
-<b>Faça esse curso de React e:<b/>
+<b>Faça esse curso de React e:</b>
 - Crie um projeto React com Typescript do zero com Create React App
 - Entenda conceitos de React como Componentização, Props e State
 - Evite sobreposições de CSS com CSS Modules
