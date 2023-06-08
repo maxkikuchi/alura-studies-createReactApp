@@ -1,10 +1,12 @@
 import React from "react";
-import './style.scss'
+//import './style.scss'
+import style from './button.module.scss' //.scss é uma extensão referente ao pacote Saas
 
+//style com o plugin typescript-plugin-css-modules
 class ButtonProd extends React.Component{
     render() {
         return(
-            <button className="button">
+            <button className={style.button}>
                 Button
             </button>
         )
