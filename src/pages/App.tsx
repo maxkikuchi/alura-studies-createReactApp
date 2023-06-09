@@ -1,8 +1,8 @@
-import React from 'react';
 import Form from '../Components/Form';
 import List from '../Components/List'
 //import './style.scss'
 import style from './app.module.scss'
+import Cronometro from '../Components/Cronometro';
 
 function App() {
   return (
@@ -18,6 +18,7 @@ function App2() {
     <div className={style.AppStyle}>
       <Form />
       <List />
+      <Cronometro/>
     </div>
   );
 }
