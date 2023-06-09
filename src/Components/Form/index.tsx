@@ -34,10 +34,11 @@ class Form extends React.Component{
                         required
                     />
                 </div>
-                <Button/>
+                <Button texto=' 2'>Adicionar</Button>
             </form>
         )
     }
 }
+
 
 export default Form
