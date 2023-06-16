@@ -13,10 +13,10 @@ class ButtonProd extends React.Component<{texto? : string}>{
     }
 } 
 
-class ButtonProd2 extends React.Component<{children?: React.ReactNode, texto: string}>{
+class ButtonProd2 extends React.Component<{children?: React.ReactNode, texto: string, type?: "button" | "submit" | "reset" | undefined}>{
     render() {
         return(
-            <button className={style.button}>
+            <button className={style.button} type={this.props.type}>
                 <u>
                 {this.props.children}
                 {this.props.texto}

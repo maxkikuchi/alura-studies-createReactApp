@@ -3,24 +3,19 @@ import List from '../Components/List'
 //import './style.scss'
 import style from './app.module.scss'
 import Cronometro from '../Components/Cronometro';
+import React from 'react';
+import { ITarefa } from '../types/tarefa'
 
 function App() {
-  return (
-    <div className={style.AppStyle}>
-      
-      <List />
-    </div>
-  );
-}
+  const [tarefas, setTarefa] = React.useState<ITarefa[] | []>([])
 
-function App2() {
   return (
     <div className={style.AppStyle}>
-      <Form />
-      <List />
+      <Form setTarefas={setTarefa}/>
+      <List tarefas={tarefas}/>
       <Cronometro/>
     </div>
   );
 }
 
-export default App2;
+export default App;
