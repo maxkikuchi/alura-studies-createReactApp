@@ -4,7 +4,12 @@ import Item from './Item'
 import React from 'react'
 import { ITarefa } from '../../types/tarefa'
 
-function List({tarefas} : {tarefas : ITarefa[]}){
+interface Props{
+    tarefas : ITarefa[]
+    selecionarTarefa : (tarefaSelecionada : ITarefa) => void
+}
+
+function List({tarefas, selecionarTarefa} : Props){
 /*     const tarefas = [
         {
             tarefa: "React",
@@ -27,8 +32,9 @@ function List({tarefas} : {tarefas : ITarefa[]}){
             <ul>
                 {tarefas.map((item, index) => (
                     <Item 
-                        key={index} 
-                        {...item} 
+                        key={item.id} 
+                        {...item}
+                        selecionarTarefa={selecionarTarefa} 
                     />
                 ))}
             </ul>

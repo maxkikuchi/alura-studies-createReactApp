@@ -13,10 +13,30 @@ class ButtonProd extends React.Component<{texto? : string}>{
     }
 } 
 
-class ButtonProd2 extends React.Component<{children?: React.ReactNode, texto: string, type?: "button" | "submit" | "reset" | undefined}>{
+interface Props{
+    children?: React.ReactNode, 
+    texto: string, 
+    type?: "button" | "submit" | "reset" | undefined, 
+    onClick?: () => void
+}
+
+function ButtonProd2({children, type, texto, onClick }: Props)
+{
+    return(
+        <button className={style.button} type={type} onClick={onClick}>
+            <u>
+            {children}
+            {texto}
+            </u>
+        </button>
+    )
+} 
+
+class ButtonProd2_OLD extends React.Component<{children?: React.ReactNode, texto: string, 
+    type?: "button" | "submit" | "reset" | undefined, onClick?: () => void }>{
     render() {
         return(
-            <button className={style.button} type={this.props.type}>
+            <button className={style.button} type={this.props.type} onClick={this.props.onClick}>
                 <u>
                 {this.props.children}
                 {this.props.texto}
